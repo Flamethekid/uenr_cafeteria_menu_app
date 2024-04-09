@@ -33,23 +33,23 @@ class MyApp extends StatelessWidget {
           body: TabBarView(children: [
             /* Enter your two food items first, then enter your two images, then enter your two prices */
             //Monday
-            _menu('pancake', 'scrambled eggs', 'images/pancakes2.jpeg',
-                'images/Scrambled_eggs.jpeg', '2.99', '1.50'),
+            _menu('pancake', 'images/pancakes2.jpeg', '2.99', 'scrambled eggs',
+                'images/Scrambled_eggs.jpeg', '1.50'),
             //tuesday
-            _menu('pancake', 'scrambled eggs', 'images/pancakes2.jpeg',
-                'images/Scrambled_eggs.jpeg', '2.99', '1.50'),
+            _menu('pancake', 'images/pancakes2.jpeg', '2.99', 'scrambled eggs',
+                'images/Scrambled_eggs.jpeg', '1.50'),
             //Wednesday
-            _menu('pancake', 'scrambled eggs', 'images/pancakes2.jpeg',
-                'images/Scrambled_eggs.jpeg', '2.99', '1.50'),
+            _menu('pancake', 'images/pancakes2.jpeg', '2.99', 'scrambled eggs',
+                'images/Scrambled_eggs.jpeg', '1.50'),
             //Thursday
-            _menu('pancake', 'scrambled eggs', 'images/pancakes2.jpeg',
-                'images/Scrambled_eggs.jpeg', '2.99', '1.50'),
+            _menu('pancake', 'images/pancakes2.jpeg', '2.99', 'scrambled eggs',
+                'images/Scrambled_eggs.jpeg', '1.50'),
             //Friday
-            _menu('pancake', 'scrambled eggs', 'images/pancakes2.jpeg',
-                'images/Scrambled_eggs.jpeg', '2.99', '1.50'),
+            _menu('pancake', 'images/pancakes2.jpeg', '2.99', 'scrambled eggs',
+                'images/Scrambled_eggs.jpeg', '1.50'),
             //Saturday
-            _menu('pancake', 'scrambled eggs', 'images/pancakes2.jpeg',
-                'images/Scrambled_eggs.jpeg', '2.99', '1.50'),
+            _menu('pancake', 'images/pancakes2.jpeg', '2.99', 'scrambled eggs',
+                'images/Scrambled_eggs.jpeg', '1.50'),
           ]),
         ),
       ),
