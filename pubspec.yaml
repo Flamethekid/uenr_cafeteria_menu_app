@@ -64,7 +64,7 @@ flutter:
   #   - images/a_dot_ham.jpeg
 
   assets:
-    - images/pancakes2.jpeg
+    - 'images/pancakes2.jpeg'
     - images/English_muffin.jpeg
     - images/Pancakes.jpeg
     - images/pizza.jpeg

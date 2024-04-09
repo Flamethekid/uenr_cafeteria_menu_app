@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
 
+//main method
 void main() {
   runApp(const MyApp());
 }
 
+//main page widget
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      //controls the tabs that appear in the appbar
       home: DefaultTabController(
         length: 6,
         child: Scaffold(
@@ -25,992 +28,219 @@ class MyApp extends StatelessWidget {
               Tab(text: 'Saturday'),
             ]),
           ),
-          body: const TabBarView(children: [
-            Center(
-              child: Row(
-                children: [
-                  //food column
-                  Column(children: [
-                    Padding(padding: EdgeInsets.all(16)),
-                    Text(
-                      'Pancakes',
-                      style: TextStyle(
-                        fontSize: 17,
-                      ),
-                    ),
-                    Padding(padding: EdgeInsets.all(55)),
-                    Text('Scambled Eggs',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                  ]),
-                  Padding(padding: EdgeInsets.only(right: 70)),
-                  //Meal Type Column
-                  Column(
-                    children: [
-                      Center(
-                        child: Text('Breakfast',
-                            style: TextStyle(
-                              fontSize: 17,
-                            )),
-                      ),
-                      Image(
-                        image: AssetImage('images/pancakes2.jpeg'),
-                        height: 100,
-                        width: 90,
-                      ),
-                      Image(
-                        image: AssetImage('images/Scrambled_eggs.jpeg'),
-                        height: 100,
-                        width: 90,
-                      )
-                    ],
-                  ),
-                  //Price Column
-                  Padding(padding: EdgeInsets.only(right: 100)),
-                  Column(
-                    children: [
-                      Padding(padding: EdgeInsets.all(16)),
-                      Text('2.99',
-                          style: TextStyle(
-                            fontSize: 17,
-                          )),
-                      Padding(padding: EdgeInsets.all(55)),
-                      Text('1.50',
-                          style: TextStyle(
-                            fontSize: 17,
-                          )),
-                    ],
-                  ),
-                  //food column
-                  Column(children: [
-                    Padding(padding: EdgeInsets.all(16)),
-                    Text(
-                      'Pancakes',
-                      style: TextStyle(
-                        fontSize: 17,
-                      ),
-                    ),
-                    Padding(padding: EdgeInsets.all(55)),
-                    Text('Scambled Eggs',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                  ]),
-                  Padding(padding: EdgeInsets.only(right: 70)),
-                  //Meal Type Column
-                  Column(
-                    children: [
-                      Center(
-                        child: Text('Breakfast',
-                            style: TextStyle(
-                              fontSize: 17,
-                            )),
-                      ),
-                      Image(
-                        image: AssetImage('images/pancakes2.jpeg'),
-                        height: 100,
-                        width: 90,
-                      ),
-                      Image(
-                        image: AssetImage('images/Scrambled_eggs.jpeg'),
-                        height: 100,
-                        width: 90,
-                      )
-                    ],
-                  ),
-                  //Price Column
-                  Padding(padding: EdgeInsets.only(right: 100)),
-                  Column(
-                    children: [
-                      Padding(padding: EdgeInsets.all(16)),
-                      Text('2.99',
-                          style: TextStyle(
-                            fontSize: 17,
-                          )),
-                      Padding(padding: EdgeInsets.all(55)),
-                      Text('1.50',
-                          style: TextStyle(
-                            fontSize: 17,
-                          )),
-                    ],
-                  ),
-                  //food column
-                  Column(children: [
-                    Padding(padding: EdgeInsets.all(16)),
-                    Text(
-                      'Pancakes',
-                      style: TextStyle(
-                        fontSize: 17,
-                      ),
-                    ),
-                    Padding(padding: EdgeInsets.all(55)),
-                    Text('Scambled Eggs',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                  ]),
-                  Padding(padding: EdgeInsets.only(right: 50)),
-                  //Meal Type Column
-                  Column(
-                    children: [
-                      Center(
-                        child: Text('Breakfast',
-                            style: TextStyle(
-                              fontSize: 17,
-                            )),
-                      ),
-                      Image(
-                        image: AssetImage('images/pancakes2.jpeg'),
-                        height: 100,
-                        width: 90,
-                      ),
-                      Image(
-                        image: AssetImage('images/Scrambled_eggs.jpeg'),
-                        height: 100,
-                        width: 90,
-                      )
-                    ],
-                  ),
-                  //Price Column
-                  Padding(padding: EdgeInsets.only(right: 60)),
-                  Column(
-                    children: [
-                      Padding(padding: EdgeInsets.all(16)),
-                      Text('2.99',
-                          style: TextStyle(
-                            fontSize: 17,
-                          )),
-                      Padding(padding: EdgeInsets.all(55)),
-                      Text('1.50',
-                          style: TextStyle(
-                            fontSize: 17,
-                          )),
-                    ],
-                  )
-                ],
-              ),
-            ),
+
+          //body section
+          body: TabBarView(children: [
+            /* Enter your two food items first, then enter your two images, then enter your two prices */
+            //Monday
+            _menu('pancake', 'images/pancakes2.jpeg', '2.99', 'scrambled eggs',
+                'images/Scrambled_eggs.jpeg', '1.50'),
             //tuesday
-            Row(
-              children: [
-                //food column
-                Column(children: [
-                  Padding(padding: EdgeInsets.all(16)),
-                  Text(
-                    'Pancakes',
-                    style: TextStyle(
-                      fontSize: 17,
-                    ),
-                  ),
-                  Padding(padding: EdgeInsets.all(55)),
-                  Text('Scambled Eggs',
-                      style: TextStyle(
-                        fontSize: 17,
-                      )),
-                ]),
-                Padding(padding: EdgeInsets.only(right: 70)),
-                //Meal Type Column
-                Column(
-                  children: [
-                    Center(
-                      child: Text('Breakfast',
-                          style: TextStyle(
-                            fontSize: 17,
-                          )),
-                    ),
-                    Image(
-                      image: AssetImage('images/pancakes2.jpeg'),
-                      height: 100,
-                      width: 90,
-                    ),
-                    Image(
-                      image: AssetImage('images/Scrambled_eggs.jpeg'),
-                      height: 100,
-                      width: 90,
-                    )
-                  ],
-                ),
-                //Price Column
-                Padding(padding: EdgeInsets.only(right: 100)),
-                Column(
-                  children: [
-                    Padding(padding: EdgeInsets.all(16)),
-                    Text('2.99',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                    Padding(padding: EdgeInsets.all(55)),
-                    Text('1.50',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                  ],
-                ),
-                //food column
-                Column(children: [
-                  Padding(padding: EdgeInsets.all(16)),
-                  Text(
-                    'Pancakes',
-                    style: TextStyle(
-                      fontSize: 17,
-                    ),
-                  ),
-                  Padding(padding: EdgeInsets.all(55)),
-                  Text('Scambled Eggs',
-                      style: TextStyle(
-                        fontSize: 17,
-                      )),
-                ]),
-                Padding(padding: EdgeInsets.only(right: 70)),
-                //Meal Type Column
-                Column(
-                  children: [
-                    Center(
-                      child: Text('Breakfast',
-                          style: TextStyle(
-                            fontSize: 17,
-                          )),
-                    ),
-                    Image(
-                      image: AssetImage('images/pancakes2.jpeg'),
-                      height: 100,
-                      width: 90,
-                    ),
-                    Image(
-                      image: AssetImage('images/Scrambled_eggs.jpeg'),
-                      height: 100,
-                      width: 90,
-                    )
-                  ],
-                ),
-                //Price Column
-                Padding(padding: EdgeInsets.only(right: 100)),
-                Column(
-                  children: [
-                    Padding(padding: EdgeInsets.all(16)),
-                    Text('2.99',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                    Padding(padding: EdgeInsets.all(55)),
-                    Text('1.50',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                  ],
-                ),
-                //food column
-                Column(children: [
-                  Padding(padding: EdgeInsets.all(16)),
-                  Text(
-                    'Pancakes',
-                    style: TextStyle(
-                      fontSize: 17,
-                    ),
-                  ),
-                  Padding(padding: EdgeInsets.all(55)),
-                  Text('Scambled Eggs',
-                      style: TextStyle(
-                        fontSize: 17,
-                      )),
-                ]),
-                Padding(padding: EdgeInsets.only(right: 50)),
-                //Meal Type Column
-                Column(
-                  children: [
-                    Center(
-                      child: Text('Breakfast',
-                          style: TextStyle(
-                            fontSize: 17,
-                          )),
-                    ),
-                    Image(
-                      image: AssetImage('images/pancakes2.jpeg'),
-                      height: 100,
-                      width: 90,
-                    ),
-                    Image(
-                      image: AssetImage('images/Scrambled_eggs.jpeg'),
-                      height: 100,
-                      width: 90,
-                    )
-                  ],
-                ),
-                //Price Column
-                Padding(padding: EdgeInsets.only(right: 60)),
-                Column(
-                  children: [
-                    Padding(padding: EdgeInsets.all(16)),
-                    Text('2.99',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                    Padding(padding: EdgeInsets.all(55)),
-                    Text('1.50',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                  ],
-                )
-              ],
-            ),
+            _menu('pancake', 'images/pancakes2.jpeg', '2.99', 'scrambled eggs',
+                'images/Scrambled_eggs.jpeg', '1.50'),
             //Wednesday
-            Row(
-              children: [
-                //food column
-                Column(children: [
-                  Padding(padding: EdgeInsets.all(16)),
-                  Text(
-                    'Pancakes',
-                    style: TextStyle(
-                      fontSize: 17,
-                    ),
-                  ),
-                  Padding(padding: EdgeInsets.all(55)),
-                  Text('Scambled Eggs',
-                      style: TextStyle(
-                        fontSize: 17,
-                      )),
-                ]),
-                Padding(padding: EdgeInsets.only(right: 70)),
-                //Meal Type Column
-                Column(
-                  children: [
-                    Center(
-                      child: Text('Breakfast',
-                          style: TextStyle(
-                            fontSize: 17,
-                          )),
-                    ),
-                    Image(
-                      image: AssetImage('images/pancakes2.jpeg'),
-                      height: 100,
-                      width: 90,
-                    ),
-                    Image(
-                      image: AssetImage('images/Scrambled_eggs.jpeg'),
-                      height: 100,
-                      width: 90,
-                    )
-                  ],
-                ),
-                //Price Column
-                Padding(padding: EdgeInsets.only(right: 100)),
-                Column(
-                  children: [
-                    Padding(padding: EdgeInsets.all(16)),
-                    Text('2.99',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                    Padding(padding: EdgeInsets.all(55)),
-                    Text('1.50',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                  ],
-                ),
-                //food column
-                Column(children: [
-                  Padding(padding: EdgeInsets.all(16)),
-                  Text(
-                    'Pancakes',
-                    style: TextStyle(
-                      fontSize: 17,
-                    ),
-                  ),
-                  Padding(padding: EdgeInsets.all(55)),
-                  Text('Scambled Eggs',
-                      style: TextStyle(
-                        fontSize: 17,
-                      )),
-                ]),
-                Padding(padding: EdgeInsets.only(right: 70)),
-                //Meal Type Column
-                Column(
-                  children: [
-                    Center(
-                      child: Text('Breakfast',
-                          style: TextStyle(
-                            fontSize: 17,
-                          )),
-                    ),
-                    Image(
-                      image: AssetImage('images/pancakes2.jpeg'),
-                      height: 100,
-                      width: 90,
-                    ),
-                    Image(
-                      image: AssetImage('images/Scrambled_eggs.jpeg'),
-                      height: 100,
-                      width: 90,
-                    )
-                  ],
-                ),
-                //Price Column
-                Padding(padding: EdgeInsets.only(right: 100)),
-                Column(
-                  children: [
-                    Padding(padding: EdgeInsets.all(16)),
-                    Text('2.99',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                    Padding(padding: EdgeInsets.all(55)),
-                    Text('1.50',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                  ],
-                ),
-                //food column
-                Column(children: [
-                  Padding(padding: EdgeInsets.all(16)),
-                  Text(
-                    'Pancakes',
-                    style: TextStyle(
-                      fontSize: 17,
-                    ),
-                  ),
-                  Padding(padding: EdgeInsets.all(55)),
-                  Text('Scambled Eggs',
-                      style: TextStyle(
-                        fontSize: 17,
-                      )),
-                ]),
-                Padding(padding: EdgeInsets.only(right: 50)),
-                //Meal Type Column
-                Column(
-                  children: [
-                    Center(
-                      child: Text('Breakfast',
-                          style: TextStyle(
-                            fontSize: 17,
-                          )),
-                    ),
-                    Image(
-                      image: AssetImage('images/pancakes2.jpeg'),
-                      height: 100,
-                      width: 90,
-                    ),
-                    Image(
-                      image: AssetImage('images/Scrambled_eggs.jpeg'),
-                      height: 100,
-                      width: 90,
-                    )
-                  ],
-                ),
-                //Price Column
-                Padding(padding: EdgeInsets.only(right: 60)),
-                Column(
-                  children: [
-                    Padding(padding: EdgeInsets.all(16)),
-                    Text('2.99',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                    Padding(padding: EdgeInsets.all(55)),
-                    Text('1.50',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                  ],
-                )
-              ],
-            ),
+            _menu('pancake', 'images/pancakes2.jpeg', '2.99', 'scrambled eggs',
+                'images/Scrambled_eggs.jpeg', '1.50'),
             //Thursday
-            Row(
-              children: [
-                //food column
-                Column(children: [
-                  Padding(padding: EdgeInsets.all(16)),
-                  Text(
-                    'Pancakes',
-                    style: TextStyle(
-                      fontSize: 17,
-                    ),
-                  ),
-                  Padding(padding: EdgeInsets.all(55)),
-                  Text('Scambled Eggs',
-                      style: TextStyle(
-                        fontSize: 17,
-                      )),
-                ]),
-                Padding(padding: EdgeInsets.only(right: 70)),
-                //Meal Type Column
-                Column(
-                  children: [
-                    Center(
-                      child: Text('Breakfast',
-                          style: TextStyle(
-                            fontSize: 17,
-                          )),
-                    ),
-                    Image(
-                      image: AssetImage('images/pancakes2.jpeg'),
-                      height: 100,
-                      width: 90,
-                    ),
-                    Image(
-                      image: AssetImage('images/Scrambled_eggs.jpeg'),
-                      height: 100,
-                      width: 90,
-                    )
-                  ],
-                ),
-                //Price Column
-                Padding(padding: EdgeInsets.only(right: 100)),
-                Column(
-                  children: [
-                    Padding(padding: EdgeInsets.all(16)),
-                    Text('2.99',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                    Padding(padding: EdgeInsets.all(55)),
-                    Text('1.50',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                  ],
-                ),
-                //food column
-                Column(children: [
-                  Padding(padding: EdgeInsets.all(16)),
-                  Text(
-                    'Pancakes',
-                    style: TextStyle(
-                      fontSize: 17,
-                    ),
-                  ),
-                  Padding(padding: EdgeInsets.all(55)),
-                  Text('Scambled Eggs',
-                      style: TextStyle(
-                        fontSize: 17,
-                      )),
-                ]),
-                Padding(padding: EdgeInsets.only(right: 70)),
-                //Meal Type Column
-                Column(
-                  children: [
-                    Center(
-                      child: Text('Breakfast',
-                          style: TextStyle(
-                            fontSize: 17,
-                          )),
-                    ),
-                    Image(
-                      image: AssetImage('images/pancakes2.jpeg'),
-                      height: 100,
-                      width: 90,
-                    ),
-                    Image(
-                      image: AssetImage('images/Scrambled_eggs.jpeg'),
-                      height: 100,
-                      width: 90,
-                    )
-                  ],
-                ),
-                //Price Column
-                Padding(padding: EdgeInsets.only(right: 100)),
-                Column(
-                  children: [
-                    Padding(padding: EdgeInsets.all(16)),
-                    Text('2.99',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                    Padding(padding: EdgeInsets.all(55)),
-                    Text('1.50',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                  ],
-                ),
-                //food column
-                Column(children: [
-                  Padding(padding: EdgeInsets.all(16)),
-                  Text(
-                    'Pancakes',
-                    style: TextStyle(
-                      fontSize: 17,
-                    ),
-                  ),
-                  Padding(padding: EdgeInsets.all(55)),
-                  Text('Scambled Eggs',
-                      style: TextStyle(
-                        fontSize: 17,
-                      )),
-                ]),
-                Padding(padding: EdgeInsets.only(right: 50)),
-                //Meal Type Column
-                Column(
-                  children: [
-                    Center(
-                      child: Text('Breakfast',
-                          style: TextStyle(
-                            fontSize: 17,
-                          )),
-                    ),
-                    Image(
-                      image: AssetImage('images/pancakes2.jpeg'),
-                      height: 100,
-                      width: 90,
-                    ),
-                    Image(
-                      image: AssetImage('images/Scrambled_eggs.jpeg'),
-                      height: 100,
-                      width: 90,
-                    )
-                  ],
-                ),
-                //Price Column
-                Padding(padding: EdgeInsets.only(right: 60)),
-                Column(
-                  children: [
-                    Padding(padding: EdgeInsets.all(16)),
-                    Text('2.99',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                    Padding(padding: EdgeInsets.all(55)),
-                    Text('1.50',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                  ],
-                )
-              ],
-            ),
+            _menu('pancake', 'images/pancakes2.jpeg', '2.99', 'scrambled eggs',
+                'images/Scrambled_eggs.jpeg', '1.50'),
             //Friday
-            Row(
-              children: [
-                //food column
-                Column(children: [
-                  Padding(padding: EdgeInsets.all(16)),
-                  Text(
-                    'Pancakes',
-                    style: TextStyle(
-                      fontSize: 17,
-                    ),
-                  ),
-                  Padding(padding: EdgeInsets.all(55)),
-                  Text('Scambled Eggs',
-                      style: TextStyle(
-                        fontSize: 17,
-                      )),
-                ]),
-                Padding(padding: EdgeInsets.only(right: 70)),
-                //Meal Type Column
-                Column(
-                  children: [
-                    Center(
-                      child: Text('Breakfast',
-                          style: TextStyle(
-                            fontSize: 17,
-                          )),
-                    ),
-                    Image(
-                      image: AssetImage('images/pancakes2.jpeg'),
-                      height: 100,
-                      width: 90,
-                    ),
-                    Image(
-                      image: AssetImage('images/Scrambled_eggs.jpeg'),
-                      height: 100,
-                      width: 90,
-                    )
-                  ],
-                ),
-                //Price Column
-                Padding(padding: EdgeInsets.only(right: 100)),
-                Column(
-                  children: [
-                    Padding(padding: EdgeInsets.all(16)),
-                    Text('2.99',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                    Padding(padding: EdgeInsets.all(55)),
-                    Text('1.50',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                  ],
-                ),
-                //food column
-                Column(children: [
-                  Padding(padding: EdgeInsets.all(16)),
-                  Text(
-                    'Pancakes',
-                    style: TextStyle(
-                      fontSize: 17,
-                    ),
-                  ),
-                  Padding(padding: EdgeInsets.all(55)),
-                  Text('Scambled Eggs',
-                      style: TextStyle(
-                        fontSize: 17,
-                      )),
-                ]),
-                Padding(padding: EdgeInsets.only(right: 70)),
-                //Meal Type Column
-                Column(
-                  children: [
-                    Center(
-                      child: Text('Breakfast',
-                          style: TextStyle(
-                            fontSize: 17,
-                          )),
-                    ),
-                    Image(
-                      image: AssetImage('images/pancakes2.jpeg'),
-                      height: 100,
-                      width: 90,
-                    ),
-                    Image(
-                      image: AssetImage('images/Scrambled_eggs.jpeg'),
-                      height: 100,
-                      width: 90,
-                    )
-                  ],
-                ),
-                //Price Column
-                Padding(padding: EdgeInsets.only(right: 100)),
-                Column(
-                  children: [
-                    Padding(padding: EdgeInsets.all(16)),
-                    Text('2.99',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                    Padding(padding: EdgeInsets.all(55)),
-                    Text('1.50',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                  ],
-                ),
-                //food column
-                Column(children: [
-                  Padding(padding: EdgeInsets.all(16)),
-                  Text(
-                    'Pancakes',
-                    style: TextStyle(
-                      fontSize: 17,
-                    ),
-                  ),
-                  Padding(padding: EdgeInsets.all(55)),
-                  Text('Scambled Eggs',
-                      style: TextStyle(
-                        fontSize: 17,
-                      )),
-                ]),
-                Padding(padding: EdgeInsets.only(right: 50)),
-                //Meal Type Column
-                Column(
-                  children: [
-                    Center(
-                      child: Text('Breakfast',
-                          style: TextStyle(
-                            fontSize: 17,
-                          )),
-                    ),
-                    Image(
-                      image: AssetImage('images/pancakes2.jpeg'),
-                      height: 100,
-                      width: 90,
-                    ),
-                    Image(
-                      image: AssetImage('images/Scrambled_eggs.jpeg'),
-                      height: 100,
-                      width: 90,
-                    )
-                  ],
-                ),
-                //Price Column
-                Padding(padding: EdgeInsets.only(right: 60)),
-                Column(
-                  children: [
-                    Padding(padding: EdgeInsets.all(16)),
-                    Text('2.99',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                    Padding(padding: EdgeInsets.all(55)),
-                    Text('1.50',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                  ],
-                )
-              ],
-            ),
+            _menu('pancake', 'images/pancakes2.jpeg', '2.99', 'scrambled eggs',
+                'images/Scrambled_eggs.jpeg', '1.50'),
             //Saturday
-            Row(children: [
-              //food column
-              Column(children: [
-                Padding(padding: EdgeInsets.all(16)),
-                Text(
-                  'Pancakes',
-                  style: TextStyle(
-                    fontSize: 17,
-                  ),
-                ),
-                Padding(padding: EdgeInsets.all(55)),
-                Text('Scambled Eggs',
-                    style: TextStyle(
-                      fontSize: 17,
-                    )),
-              ]),
-              Padding(padding: EdgeInsets.only(right: 70)),
-              //Meal Type Column
-              Column(
-                children: [
-                  Center(
-                    child: Text('Breakfast',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                  ),
-                  Image(
-                    image: AssetImage('images/pancakes2.jpeg'),
-                    height: 100,
-                    width: 90,
-                  ),
-                  Image(
-                    image: AssetImage('images/Scrambled_eggs.jpeg'),
-                    height: 100,
-                    width: 90,
-                  )
-                ],
-              ),
-              //Price Column
-              Padding(padding: EdgeInsets.only(right: 100)),
-              Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(16)),
-                  Text('2.99',
-                      style: TextStyle(
-                        fontSize: 17,
-                      )),
-                  Padding(padding: EdgeInsets.all(55)),
-                  Text('1.50',
-                      style: TextStyle(
-                        fontSize: 17,
-                      )),
-                ],
-              ),
-              //food column
-              Column(children: [
-                Padding(padding: EdgeInsets.all(16)),
-                Text(
-                  'Pancakes',
-                  style: TextStyle(
-                    fontSize: 17,
-                  ),
-                ),
-                Padding(padding: EdgeInsets.all(55)),
-                Text('Scambled Eggs',
-                    style: TextStyle(
-                      fontSize: 17,
-                    )),
-              ]),
-              Padding(padding: EdgeInsets.only(right: 70)),
-              //Meal Type Column
-              Column(
-                children: [
-                  Center(
-                    child: Text('Breakfast',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                  ),
-                  Image(
-                    image: AssetImage('images/pancakes2.jpeg'),
-                    height: 100,
-                    width: 90,
-                  ),
-                  Image(
-                    image: AssetImage('images/Scrambled_eggs.jpeg'),
-                    height: 100,
-                    width: 90,
-                  )
-                ],
-              ),
-              //Price Column
-              Padding(padding: EdgeInsets.only(right: 100)),
-              Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(16)),
-                  Text('2.99',
-                      style: TextStyle(
-                        fontSize: 17,
-                      )),
-                  Padding(padding: EdgeInsets.all(55)),
-                  Text('1.50',
-                      style: TextStyle(
-                        fontSize: 17,
-                      )),
-                ],
-              ),
-              //food column
-              Column(children: [
-                Padding(padding: EdgeInsets.all(16)),
-                Text(
-                  'Pancakes',
-                  style: TextStyle(
-                    fontSize: 17,
-                  ),
-                ),
-                Padding(padding: EdgeInsets.all(55)),
-                Text('Scambled Eggs',
-                    style: TextStyle(
-                      fontSize: 17,
-                    )),
-              ]),
-              Padding(padding: EdgeInsets.only(right: 50)),
-              //Meal Type Column
-              Column(
-                children: [
-                  Center(
-                    child: Text('Breakfast',
-                        style: TextStyle(
-                          fontSize: 17,
-                        )),
-                  ),
-                  Image(
-                    image: AssetImage('images/pancakes2.jpeg'),
-                    height: 100,
-                    width: 90,
-                  ),
-                  Image(
-                    image: AssetImage('images/Scrambled_eggs.jpeg'),
-                    height: 100,
-                    width: 90,
-                  )
-                ],
-              ),
-              //Price Column
-              Padding(padding: EdgeInsets.only(right: 60)),
-              Column(
-                children: [
-                  Padding(padding: EdgeInsets.all(16)),
-                  Text('2.99',
-                      style: TextStyle(
-                        fontSize: 17,
-                      )),
-                  Padding(padding: EdgeInsets.all(55)),
-                  Text('1.50',
-                      style: TextStyle(
-                        fontSize: 17,
-                      )),
-                ],
-              )
-            ]),
+            _menu('pancake', 'images/pancakes2.jpeg', '2.99', 'scrambled eggs',
+                'images/Scrambled_eggs.jpeg', '1.50'),
           ]),
         ),
+      ),
+    );
+  }
+
+  Widget _menu(String food1, String img1, String price1, String food2,
+      String img2, String price2) {
+    return Center(
+      child: Row(
+        children: [
+          //food column
+          Column(children: [
+            const Padding(padding: EdgeInsets.all(16)),
+            Text(
+              food1,
+              style: const TextStyle(
+                fontSize: 17,
+              ),
+            ),
+            const Padding(padding: EdgeInsets.all(55)),
+            Text(food2,
+                style: const TextStyle(
+                  fontSize: 17,
+                )),
+          ]),
+
+          const Divider(
+            thickness: 50.0,
+            endIndent: 50.0,
+            height: 50.0,
+            color: Colors.black,
+          ),
+
+          //Meal Type Column
+          Column(
+            children: [
+              const Center(
+                child: Text('Breakfast',
+                    style: TextStyle(
+                      fontSize: 17,
+                    )),
+              ),
+              Image(
+                image: AssetImage(img1),
+                height: 100,
+                width: 90,
+              ),
+              Image(
+                image: AssetImage(img2),
+                height: 100,
+                width: 90,
+              )
+            ],
+          ),
+
+          const Divider(),
+
+          //Price Column
+          Column(
+            children: [
+              const Padding(padding: EdgeInsets.all(16)),
+              Text(price1,
+                  style: const TextStyle(
+                    fontSize: 17,
+                  )),
+              const Padding(padding: EdgeInsets.all(55)),
+              Text(price2,
+                  style: const TextStyle(
+                    fontSize: 17,
+                  )),
+            ],
+          ),
+
+          //food column
+          Column(children: [
+            const Padding(padding: EdgeInsets.all(16)),
+            Text(
+              food1,
+              style: const TextStyle(
+                fontSize: 17,
+              ),
+            ),
+            const Padding(padding: EdgeInsets.all(55)),
+            Text(food2,
+                style: const TextStyle(
+                  fontSize: 17,
+                )),
+          ]),
+
+          const Divider(),
+
+          //Meal Type Column
+          Column(
+            children: [
+              const Center(
+                child: Text('Breakfast',
+                    style: TextStyle(
+                      fontSize: 17,
+                    )),
+              ),
+              Image(
+                image: AssetImage(img1),
+                height: 100,
+                width: 90,
+              ),
+              Image(
+                image: AssetImage(img2),
+                height: 100,
+                width: 90,
+              )
+            ],
+          ),
+
+          const Divider(),
+
+          //Price Column
+
+          Column(
+            children: [
+              const Padding(padding: EdgeInsets.all(16)),
+              Text(price1,
+                  style: const TextStyle(
+                    fontSize: 17,
+                  )),
+              const Padding(padding: EdgeInsets.all(55)),
+              Text(price2,
+                  style: const TextStyle(
+                    fontSize: 17,
+                  )),
+            ],
+          ),
+
+          //food column
+          Column(children: [
+            const Padding(padding: EdgeInsets.all(16)),
+            Text(
+              food1,
+              style: const TextStyle(
+                fontSize: 17,
+              ),
+            ),
+            const Padding(padding: EdgeInsets.all(55)),
+            Text(food2,
+                style: const TextStyle(
+                  fontSize: 17,
+                )),
+          ]),
+
+          const Divider(),
+
+          //Meal Type Column
+          Column(
+            children: [
+              const Center(
+                child: Text('Breakfast',
+                    style: TextStyle(
+                      fontSize: 17,
+                    )),
+              ),
+              Image(
+                image: AssetImage(img1),
+                height: 100,
+                width: 90,
+              ),
+              Image(
+                image: AssetImage(img2),
+                height: 100,
+                width: 90,
+              )
+            ],
+          ),
+
+          const Divider(),
+
+          //Price Column
+          Column(
+            children: [
+              const Padding(padding: EdgeInsets.all(16)),
+              Text(price1,
+                  style: const TextStyle(
+                    fontSize: 17,
+                  )),
+              const Padding(padding: EdgeInsets.all(55)),
+              Text(price2,
+                  style: const TextStyle(
+                    fontSize: 17,
+                  )),
+            ],
+          )
+        ],
       ),
     );
   }
